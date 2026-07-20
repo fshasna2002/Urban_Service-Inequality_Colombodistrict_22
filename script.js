@@ -509,9 +509,8 @@ const GOOGLE_FORM_CONFIG = {
     serviceType:   'entry.1615350334',
     issueCategory: 'entry.151701495',
     description:   'entry.283401894',
-    latitude:      'entry.REPLACE_WITH_LATITUDE_ENTRY_ID',
-    longitude:     'entry.REPLACE_WITH_LONGITUDE_ENTRY_ID',
-    reporterName:  'entry.REPLACE_WITH_REPORTER_NAME_ENTRY_ID'
+    location:      'entry.1312166089',
+   
   }
 };
 
