@@ -1,0 +1,385 @@
+/* ==========================================================================
+   Urban Service Inequality CSS Layout Architectures
+   ========================================================================== */
+
+:root {
+  --primary: #10233f;
+  --primary-light: #1e3a66;
+  --accent: #d7304a;
+  --bg-main: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-main: #334155;
+  --sidebar-width: 340px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --- Topbar Header Layout --- */
+.topbar {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  background: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.brand-text h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.brand-text p {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.feedback-toggle-btn {
+  background: var(--accent);
+  border: none;
+  font-weight: 600;
+}
+
+/* --- Layout Shell Structure --- */
+.app-shell {
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: white;
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.panel {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.panel-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* --- Form Control Elements --- */
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #475569;
+}
+
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+/* --- Search Engine UI --- */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  right: 16px;
+  background: white;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1010;
+  border-radius: 0 0 6px 6px;
+}
+
+.search-suggestions button {
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.search-suggestions button:hover {
+  background: #f1f5f9;
+}
+
+/* --- Themes & Legend Display --- */
+.theme-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-btn {
+  flex: 1;
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.theme-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+/* --- Layer Control Items --- */
+.service-list {
+  list-style: none;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.service-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.swatch-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.layer-count {
+  font-size: 11px;
+  color: #64748b;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* --- Information Matrix Grid --- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.stat-card {
+  background: #f8fafc;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.stat-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.info-body {
+  font-size: 13px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.info-row .k { color: #64748b; }
+.info-row .v { font-weight: 600; }
+
+.info-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  color: white;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-top: 6px;
+  margin-right: 4px;
+}
+
+/* --- Map Element Window Layout --- */
+.map-wrap {
+  flex: 1;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-status {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: opacity 0.3s;
+}
+
+.map-status.hidden { opacity: 0; pointer-events: none; }
+
+/* --- Secondary Feedback Window Slider --- */
+.feedback-panel {
+  width: var(--sidebar-width);
+  background: #f1f5f9;
+  border-left: 1px solid var(--border-color);
+  overflow-y: auto;
+  z-index: 999;
+  display: block;
+}
+
+.feedback-panel-inner {
+  padding: 16px;
+}
+
+.feedback-intro {
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.pin-btn, .submit-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.pin-btn { background: white; color: #334155; }
+.pin-btn.pinned { background: #fef3c7; border-color: #f59e0b; color: #b45309; }
+.submit-btn { background: var(--accent); color: white; border: none; }
+
+/* --- Popup Internal Typography --- */
+.popup-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.popup-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  gap: 15px;
+  margin-bottom: 2px;
+}
+
+.popup-row .k { color: #64748b; }
+.popup-row .v { font-weight: 600; color: #1e293b; }
+
+/* --- Screen Responsiveness Parameters --- */
+@media(max-width: 768px) {
+  .app-shell { flex-direction: column; }
+  .sidebar, .feedback-panel { width: 100%; height: 50vh; display: none; }
+  .sidebar.open, .feedback-panel.open { display: block; }
+}
