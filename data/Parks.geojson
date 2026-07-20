@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Parks",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": "Asanka", "name": "Emerald Park" }, "geometry": { "type": "Point", "coordinates": [ 79.9189736, 6.8051726 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": "Koskanaththa Road", "addr_city": "Piliyandala", "operator": null, "name": "Sri Mangala Green Village" }, "geometry": { "type": "Point", "coordinates": [ 79.9246529, 6.8095953 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": "private", "barrier": "gate", "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.9222561, 6.8898223 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": "gate", "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.9225336, 6.8890882 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.9206975, 6.893979 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.9056276, 6.8529176 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.929199016235756, 6.879877592083934 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.930311176757925, 6.880366942713687 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.891222441605549, 6.878419426065981 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.864877830303328, 6.961219159074279 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.861956555331844, 6.913539601755105 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 79.977265358270003, 6.913078055138405 ] } },
+{ "type": "Feature", "properties": { "leisure": "park", "vehicle": null, "barrier": null, "addr_stree": null, "addr_city": null, "operator": null, "name": null }, "geometry": { "type": "Point", "coordinates": [ 80.09969631361875, 6.951289728145671 ] } }
+]
+}
